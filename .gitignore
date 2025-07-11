@@ -1,18 +1,20 @@
-# Ignore virtual environment
-venv/
-
-# Ignore Python cache files
+# Ignore Python cache
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
 
-# Ignore memory storage (optional)
-data/memory.json
+# Ignore virtual environments
+venv/
+.env/
+.venv/
 
-# Keep all other files
-!app.py
-!requirements.txt
-!memory_engine/
-!data/
+# Ignore data files except memory.json
+data/*.pdf
+data/*.docx
+data/*.txt
+!data/memory.json
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
 
