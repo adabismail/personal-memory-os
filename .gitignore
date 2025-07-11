@@ -11,7 +11,7 @@ venv/
 data/*.pdf
 data/*.docx
 data/*.txt
-!data/memory.json
+data/memory.json
 
 # Ignore system files
 .DS_Store
