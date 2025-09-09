@@ -1,4 +1,3 @@
-# memory_engine/memory_store.py
 import os
 import json
 import tempfile
@@ -22,11 +21,11 @@ def load_memory():
         _write_json_atomic(MEMORY_FILE, {})
         return {}
     try:
-        # use utf-8-sig so BOM (if present) is handled automatically
+        # use utf-8-sig,so if BOM is present its handled automatically
         with open(MEMORY_FILE, "r", encoding="utf-8-sig") as f:
             return json.load(f)
     except json.JSONDecodeError:
-        # corrupted file — reset safely
+        # corrupted file is reset safely
         _write_json_atomic(MEMORY_FILE, {})
         return {}
     except Exception:

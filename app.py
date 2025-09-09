@@ -88,6 +88,3 @@ with st.expander("🧠 Stored Memories"):
             st.markdown("---")
     else:
         st.write("No documents uploaded yet.")
-
-
-
